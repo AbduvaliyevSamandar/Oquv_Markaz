@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2196F3"
+    tools:context=".StudentsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/student_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        app:title="Studentlar"
+        app:titleTextColor="?colorOnPrimary"/>
+
+
+    <LinearLayout
+        android:id="@+id/add_student"
+        android:layout_marginHorizontal="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/shape"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="start|center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_24"
+            />
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#F4F5F7"
+            android:text="Yangi student qo'shish"
+            android:textSize="25sp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/student_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_course" />
+
+</LinearLayout>
